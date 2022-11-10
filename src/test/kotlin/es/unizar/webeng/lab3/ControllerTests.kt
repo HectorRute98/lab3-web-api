@@ -94,7 +94,6 @@ class ControllerTests {
         verify(exactly = 2) {
             employeeRepository.save(Employee("Mary", "Manager"))
         }
-
     }
 
     @Test
@@ -103,7 +102,7 @@ class ControllerTests {
         every {
             employeeRepository.findById(1)
         } answers {
-        Optional.of(Employee("Mary", "Manager", 1))
+            Optional.of(Employee("Mary", "Manager", 1))
         }
 
         every {
@@ -140,7 +139,6 @@ class ControllerTests {
         verify(exactly = 2) {
             employeeRepository.findById(1)
         }
-
     }
 
     @Test
@@ -190,7 +188,6 @@ class ControllerTests {
         verify(exactly = 2) {
             employeeRepository.save(Employee("Tom", "Manager", 1))
         }
-
     }
 
     @Test
@@ -219,6 +216,5 @@ class ControllerTests {
         verify(exactly = 1) {
             employeeRepository.deleteById(1)
         }
-
     }
 }
